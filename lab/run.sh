@@ -21,3 +21,10 @@ device = 'cuda:0'
 model = init_detector(config_file, checkpoint_file, device=device)
 # 推理演示图像
 inference_detector(model, 'demo/demo.jpg')
+
+
+cd /project/train/src_repo/mmdetection
+python data_parser.py
+
+python tools/train.py configs/cascade_mask_rcnn_non_pserson_vehicle_coco.py --gpu-id 3
+bash ./tools/dist_train.sh configs/cascade_mask_rcnn_non_pserson_vehicle_coco.py 4
