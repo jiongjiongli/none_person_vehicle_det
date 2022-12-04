@@ -1,0 +1,24 @@
+path: ./dataset  # dataset root dir
+train: train.txt  # train images (relative to 'path') 128 images
+val: valid.txt  # val images (relative to 'path') 128 images
+test:  # test images (optional)
+
+# Classes
+names: [
+  # class_names
+  'none_person_bicycle',
+  'none_person_motorbike',
+  'none_person_electric_scooter',
+  'none_person_tricycle',
+  'none_person_auto_tricycle',
+
+  # other_class_names
+  'person',
+  'rider',
+  'bicycle_person',
+  'motorbike_person',
+  'electric_scooter_person',
+  'tricycle_person',
+  'auto_tricycle_person'
+  ]
+
